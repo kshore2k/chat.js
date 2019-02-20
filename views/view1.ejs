@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snow Chat</title>
+        <!-- emoji test-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" type="text/css" rel="stylesheet" />
+        <link href="https://cdn.rawgit.com/jonhue/imoji.js/1.0.1/imoji.min.css" type="text/css" rel="stylesheet" />
+        
+        <link rel="stylesheet" type="text/css" href="stylesheets/view1.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+        <!-- emoji test-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="/js/jquery.initialize.js"></script>
+        <!-- Js Initialize above(sets style of dynamic content) -->
+        
+        <script src="http://10.0.0.164:8000/socket.io/socket.io.js"></script>
+        <script src="/js/socket.js"></script>
+        
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <!--sockets above-->
+        <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <!-- <script src="/static/js/view1.js"></script> -->
+        
+        <!-- emoji test-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+        <script src="https://cdn.rawgit.com/jonhue/imoji.js/1.0.1/imoji.min.js"></script>
+</head>
+
+<script>
+    // Setting Random User Cursor Gif
+    $(document).ready(function(){
+        var random = Math.floor(Math.random() * 2) + 0;
+        console.log(random)
+        var imgs = [
+            '../img/snowman.gif',
+        ];
+        $('#custom').css('cursor', 'url(' + imgs[0] + ')'+','+'auto');
+
+        // Sets Hover Cursor(Pointer) as well
+        $("*").each(function() {
+            var cur = $(this);
+            if(cur.css("cursor") == "pointer") {
+            cur.css("cursor", 'url(' + imgs[0] + ')'+','+'auto');
+            }
+        });
+
+         // Setting Other Users cursors to different random images
+         var imgs2 = [
+            '../img/snowman.gif',
+            '../img/elf.gif',
+            '../img/santa.gif',
+        ];
+        $.initialize(".pointer", function(){
+            $(this).css('background', 'url(' + imgs2[Math.floor(Math.random() * 3) + 0] + ')');
+            $(this).css('background-repeat', 'no-repeat');
+        })
+    })
+</script>
+
+<body id="custom">
+
+    <div class="body-particles">
+        <div class="body-particles container">
+            <h2>𝒟𝑜 𝓎𝑜𝓊 𝓌𝒶𝓃𝓃𝒶 𝒷𝓊𝒾𝓁𝒹 𝒶 𝓈𝓃𝑜𝓌𝓂𝒶𝓃??</h2>
+            <div class="hidebar">
+                <div class="chat_box">
+                    <p></p>
+                </div>
+            </div>
+            <div style="width: 430px;">
+                <input type="text" id="message" style="width: 400px;">
+                <div id="emoji" data-imoji>😃</div>
+                <div class="imoji-picker">
+                    <div class="imoji-close">X</div>
+                    <div class="imoji-picker--search">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" width="14px" height="14px" viewBox="0 0 16 16">
+                                <g transform="translate(0, 0)">
+                                    <path fill="#2b2b2b" d="M14.7,1.3c-0.4-0.4-1-0.4-1.4,0L8,6.6L2.7,1.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4L6.6,8l-5.3,5.3
+                    c-0.4,0.4-0.4,1,0,1.4C1.5,14.9,1.7,15,2,15s0.5-0.1,0.7-0.3L8,9.4l5.3,5.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                    c0.4-0.4,0.4-1,0-1.4L9.4,8l5.3-5.3C15.1,2.3,15.1,1.7,14.7,1.3z"></path>
+                                </g>
+                            </svg>
+                    </div>
+                    <div class="imoji-picker--emojis">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="submit" id="submit" class="btn btn-success" value="𝓑𝓾𝓲𝓵𝓭">
+                <a href="/" id="back" class="btn btn-success ml-2">𝓖𝓸 𝓑𝓪𝓬𝓴</a>
+            </div>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+    <script src="/js/particles1.js"></script>
+
+    <script>
+        $(function() {
+            Imoji.init();
+        });
+
+        $(document).on('imoji:select', function(e, emoji){
+            console.log("testing testing");
+            console.log(emoji);
+            var current = $("#message").val();
+            current+= emoji.emoji;
+            $("#message").val(current);
+            Imoji.close();
+        })
+        $(".imoji-close").click(function(){
+            Imoji.close();
+        })
+    </script>
+</body>
+
+</html>

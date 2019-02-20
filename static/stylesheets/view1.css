@@ -1,0 +1,87 @@
+.container h2{
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 68%;
+    width: 530px;
+    height: 70px;
+    font-weight: bold;
+}
+.hidebar{
+    width: 500px;
+    overflow: hidden;
+    margin-left: 70%;
+    margin-bottom: 20px;
+    height: 340px;
+}
+.chat_box{
+    padding: 20px;
+    width: 518px;
+    height: 340px;
+    overflow: auto;
+    /* margin-bottom: 20px;
+    margin-left: 28%; */
+}
+#message{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid white;
+    opacity: 0.8;
+    background-color: #5da3f3;
+}
+#submit{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: lightblue;
+    background-color:white;
+    border-style: none;
+    vertical-align: top;
+}
+.pointer{
+    position: absolute;
+    width: 85px;
+    height: 75px;
+    z-index: 3;
+    background-repeat: no-repeat;
+}
+#particles-js{
+    background-color: #5da3f3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.body-particles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#back{
+    display: inline-block;
+    vertical-align: top;
+    color: lightblue;
+    background-color:white;
+    border-style: none;
+    margin-top: 10px;
+}
+.buttons{
+    width: 300px;
+}
+#custom{
+    cursor: url('../img/snowman.gif'), auto;
+}
+#emoji{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}

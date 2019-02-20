@@ -1,0 +1,93 @@
+.container h2{
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 68%;
+    color: white;
+    /* background-color: white; */
+    width: 530px;
+    height: 70px;
+    /* box-shadow: 3px 3px darkgray; */
+    border-radius: 5px;
+    opacity: 0.9
+}
+.hidebar{
+    width: 500px;
+    overflow: hidden;
+    margin-left: 70%;
+    margin-bottom: 20px;
+    height: 340px;
+}
+.chat_box{
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0.8;
+    /* background-color: white; */
+    color: white;
+    width: 518px;
+    height: 340px;
+    overflow: auto;
+    /* margin-bottom: 20px;
+    margin-left: 28%; */
+}
+#message{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+#submit{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: rgb(36, 36, 250);
+    background-color: rgb(253, 253, 160);
+}
+.pointer{
+    position: absolute;
+    width: 85px;
+    height: 75px;
+    z-index: 3;
+    background-repeat: no-repeat;
+}
+#particles-js{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.body-particles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+img{
+    width: 800px;
+    position: absolute;
+    margin-top: 250px;
+}
+#back{
+    color: rgb(36, 36, 250);
+    background-color: rgb(253, 253, 160);
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.buttons{
+    width: 200px;
+}
+#emoji{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--jQuery above-->
+    <title>Chat.js</title>
+</head>
+
+<body>
+    <!-- 3D Index Render -->
+    <script src="/js/three.js"></script>
+
+    <div id="stage"></div>
+    
+    <canvas id="text" width="700" height="200"></canvas>
+    
+    <input id="input" type="hidden" value="EDIT ME"/>
+    
+    <script src="/js/index.js"></script>
+    <!-- Materialize nav button -->
+    <div class="fixed-action-btn" id="fade_in">
+        <a class="btn-floating btn-large red">
+        <i class="large material-icons">group</i>
+        </a>
+        <ul>
+        <li><a class="btn-floating yellow darken-1" href="/view3"><i class="material-icons">star_border</i></a></li>
+        <li><a class="btn-floating green" href="/view2"><i class="material-icons">hdr_weak</i></a></li>
+        <li><a class="btn-floating blue" href="/view1"><i class="material-icons">leak_remove</i></a></li>
+        </ul>
+    </div>
+    
+    <!-- Script for nav button -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems, {
+            direction: 'right'
+        });
+    });
+    </script>
+           
+    <!-- Compiled and minified materialized JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
